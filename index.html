@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<head>
 		<script>
 			function insert(num){
@@ -20,27 +21,23 @@
 			}
 		</script>
 		<style>
-			*{
-				margin:0;
-				padding:0;
-			}
 			.button{
 				width:50;
 				height:50;
 				font-size:25;
 				margin:2;
 				cursor:pointer;
-				background:#607d8b;
+				background:black;
 				border:none;
 				color:white;
 			}
 			.textview{
-				width:220;
+				width:59%;
 				margin:5;
 				font-size:25;
 				padding:5;
 				border:none;
-				color:#607d8b;
+				color:black;
 			}
 			.main{
 				position:absolute;
@@ -48,10 +45,9 @@
 				left:50%;
 				transform:translateX(-50%)translateY(-50%);
 			}
-			.bg{
-				background:linear-gradient(to right, #e91e63, #3f51b5);
-				height:100%;
-			}
+            body{
+            background:linear-gradient(to right, red, blue);
+            }
 		</style>
 	</head>
 	<body>
@@ -83,10 +79,10 @@
 						<th><input class="button" type="button" value="1" onclick="insert(1)"></th>
 						<th><input class="button" type="button" value="2" onclick="insert(2)"></th>
 						<th><input class="button" type="button" value="3" onclick="insert(3)"></th>
-						<th rowspan="5"><input class="button" style="height:106" type="button" value="=" onclick="equal()"></th>
+						<th rowspan="5"><input class="button" type="button" value="=" onclick="equal()"></th>
 					</tr>
 					<tr>
-						<th colspan="2"><input class="button" style="106" type="button" value="0" onclick="insert(1)"></th>
+						<th colspan="2"><input class="button" type="button" value="0" onclick="insert(1)"></th>
 						<th><input class="button" type="button" value="." onclick="insert('.')"></th>
 					</tr>
 				</table>
