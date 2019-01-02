@@ -40,7 +40,7 @@
 				color:black;
 			}
 			.main{
-				position:absolute;
+            	position:absolute;
 				top:50%;
 				left:50%;
 				transform:translateX(-50%)translateY(-50%);
@@ -51,6 +51,8 @@
 		</style>
 	</head>
 	<body>
+    	<h1 style="text-align:center; color:white">Simple Calculator</h1>
+        <h2 style="color:white">You can input any <ins>valid number</ins> and operation symbol in a <ins>correct format</ins></h2>
 		<div class="main">
 			<form name="form">
 				<input class="textview" name="textview">
@@ -87,5 +89,14 @@
 					</tr>
 				</table>
 		</div>
+        <div style="color:white; position:absolute; top:70%">
+        	<h4>valid number</h4>
+            <ul style="list-style-type:disc">
+            	<li>integer: 1, 100, 99999.</li>
+                <li>decimal: 0.1, 9.999.</li>
+            </ul>
+            <h4>correct format</h4>
+            <ul style="list-style-type:disc">
+            	<li>example: 1+2-3*4/5</li>
 	</body>
 </html>
