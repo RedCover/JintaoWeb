@@ -1,102 +1,50 @@
+
+Result Size: 454 x 499
+
 <!DOCTYPE html>
 <html>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<head>
-		<script>
-			function insert(num){
-				document.form.textview.value = document.form.textview.value + num;
-			}
-			function equal(){
-				var exp = document.form.textview.value;
-				if(exp){
-					document.form.textview.value = eval(exp);
-				}
-			}
-			function clean(){
-				document.form.textview.value = "";
-			}
-			function back(){
-				var exp = document.form.textview.value;
-				document.form.textview.value = exp.substring(0, exp.length - 1);
-			}
-		</script>
-		<style>
-			.button{
-				width:50;
-				height:50;
-				font-size:25;
-				margin:2;
-				cursor:pointer;
-				background:black;
-				border:none;
-				color:white;
-			}
-			.textview{
-				width:59%;
-				margin:5;
-				font-size:25;
-				padding:5;
-				border:none;
-				color:black;
-			}
-			.main{
-            	position:absolute;
-				top:50%;
-				left:50%;
-				transform:translateX(-50%)translateY(-50%);
-			}
-            body{
-            background:linear-gradient(to right, red, blue);
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <script>
+            function insert(num){
+                document.form.textview.value = document.form.textview.value + num;
             }
-		</style>
-	</head>
-	<body>
-    	<h1 style="text-align:center; color:white">Simple Calculator</h1>
-        <h2 style="color:white">You can input any <ins>valid number</ins> and operation symbol in a <ins>correct format</ins></h2>
-		<div class="main">
-			<form name="form">
-				<input class="textview" name="textview">
-			</form>
-				<table>
-					<tr>
-						<th><input class="button" type="button" value="C" onclick="clean()"></th>
-						<th><input class="button" type="button" value="<" onclick="back()"></th>
-						<th><input class="button" type="button" value="/" onclick="insert('/')"></th>
-						<th><input class="button" type="button" value="*" onclick="insert('*')"></th>
-					</tr>
-					<tr>
-						<th><input class="button" type="button" value="7" onclick="insert(7)"></th>
-						<th><input class="button" type="button" value="8" onclick="insert(8)"></th>
-						<th><input class="button" type="button" value="9" onclick="insert(9)"></th>
-						<th><input class="button" type="button" value="-" onclick="insert('-')"></th>
-					</tr>
-					<tr>
-						<th><input class="button" type="button" value="4" onclick="insert(4)"></th>
-						<th><input class="button" type="button" value="5" onclick="insert(5)"></th>
-						<th><input class="button" type="button" value="6" onclick="insert(6)"></th>
-						<th><input class="button" type="button" value="+" 
-						onclick="insert('+')"></th>
-					</tr>
-					<tr>
-						<th><input class="button" type="button" value="1" onclick="insert(1)"></th>
-						<th><input class="button" type="button" value="2" onclick="insert(2)"></th>
-						<th><input class="button" type="button" value="3" onclick="insert(3)"></th>
-						<th rowspan="5"><input class="button" type="button" value="=" onclick="equal()"></th>
-					</tr>
-					<tr>
-						<th colspan="2"><input class="button" type="button" value="0" onclick="insert(1)"></th>
-						<th><input class="button" type="button" value="." onclick="insert('.')"></th>
-					</tr>
-				</table>
-		</div>
-        <div style="color:white; position:absolute; top:70%">
-        	<h4>valid number</h4>
-            <ul style="list-style-type:disc">
-            	<li>integer: 1, 100, 99999.</li>
-                <li>decimal: 0.1, 9.999.</li>
-            </ul>
-            <h4>correct format</h4>
-            <ul style="list-style-type:disc">
-            	<li>example: 1+2-3*4/5</li>
-	</body>
-</html>
+            function equal(){
+                var exp = document.form.textview.value;
+                if(exp){
+                    document.form.textview.value = eval(exp);
+                }
+            }
+            function clean(){
+                document.form.textview.value = "";
+            }
+            function back(){
+                var exp = document.form.textview.value;
+                document.form.textview.value = exp.substring(0, exp.length - 1);
+            }
+        </script>
+        <style>
+            .button{
+                width:5vw;
+                height:5vw;
+                font-size:3vw;
+                margin:0.05vw;
+                cursor:pointer;
+                background:black;
+                border:none;
+                color:white;
+            }
+            .textview{
+                text-align:center;
+                width:23vw;
+                margin:0.5vw;
+                font-size:3vw;
+                padding:0.5vw;
+                border:none;
+                color:black;
+            }
+            .main{
+                position:absolute;
+                top:50%;
+                left:50%;
+                transform:translateX(-50%)translateY(-50%);
