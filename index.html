@@ -45,3 +45,81 @@
                 top:50%;
                 left:50%;
                 transform:translateX(-50%)translateY(-50%);
+            }
+            body {
+            	background: linear-gradient(to right, red, blue);
+            }
+            h1 {
+            	color:white;
+            	text-align:center;
+                font-size:9vw;
+                position:absolute;
+                top:0%;
+            }
+            p1 {
+            	color:white;
+            	font-size:5vw;
+                position:absolute;
+                top:20%;
+            }
+            .explanation {
+            	color:white;
+                font-size:3vw;
+                position:absolute;
+                bottom:0;
+                width:100%
+            }
+		</style>
+	</head>
+	<body>
+    
+    	<h1>Simple Calculator</h1>
+        <p1>You can input any <ins>valid number</ins> and operation symbol in a <ins>correct format</ins></p1>
+        
+		<div class="main">
+			<form name="form">
+				<input class="textview" name="textview">
+			</form>
+				<table>
+					<tr>
+						<th><input class="button" type="button" value="C" onclick="clean()"></th>
+						<th><input class="button" type="button" value="<" onclick="back()"></th>
+						<th><input class="button" type="button" value="/" onclick="insert('/')"></th>
+						<th><input class="button" type="button" value="*" onclick="insert('*')"></th>
+					</tr>
+					<tr>
+						<th><input class="button" type="button" value="7" onclick="insert(7)"></th>
+						<th><input class="button" type="button" value="8" onclick="insert(8)"></th>
+						<th><input class="button" type="button" value="9" onclick="insert(9)"></th>
+						<th><input class="button" type="button" value="-" onclick="insert('-')"></th>
+					</tr>
+					<tr>
+						<th><input class="button" type="button" value="4" onclick="insert(4)"></th>
+						<th><input class="button" type="button" value="5" onclick="insert(5)"></th>
+						<th><input class="button" type="button" value="6" onclick="insert(6)"></th>
+						<th><input class="button" type="button" value="+" 
+						onclick="insert('+')"></th>
+					</tr>
+					<tr>
+						<th><input class="button" type="button" value="1" onclick="insert(1)"></th>
+						<th><input class="button" type="button" value="2" onclick="insert(2)"></th>
+						<th><input class="button" type="button" value="3" onclick="insert(3)"></th>
+						<th rowspan="5"><input class="button" style="height:11vw" type="button" value="=" onclick="equal()"></th>
+					</tr>
+					<tr>
+						<th colspan="2"><input class="button" style="width:11vw" type="button" value="0" onclick="insert(1)"></th>
+						<th><input class="button" type="button" value="." onclick="insert('.')"></th>
+					</tr>
+				</table>
+		</div>
+        
+        <div class="explanation">
+        <ul>Valid number</ul>
+        <li>integer: 1, 10, 999.</li>
+        <li>decimal: 0.1, 9.9</li>
+        
+        <ul>Correct format</ul>
+        <li>example: 1+2-3\4*5.</li>
+        </div>
+	</body>
+</html>
